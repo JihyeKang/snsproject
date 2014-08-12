@@ -1,0 +1,11 @@
+{% extends "wall.html" %}
+	{% block footer %}
+		{{ super() }}
+		<form action="{{ url_for('write') }}" method = post>
+			<div class="col-md-10 col-md-offset-1 well">
+				<p> 비밀글? <input type="checkbox" name = "secret_post"> </p>
+				<textarea class="form-control" rows="7" name="body_post">{{ post_body }}</textarea>
+				<span class="input-group-btn"><button class="btn btn-default" type="submit">Submit</button></span>
+			</div>
+		</form>
+		{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block body %}
+	<form action="{{ url_for('login_check') }}" method = post>
+		<div class="row">
+		  <div class="col-md-8 col-md-offset-2 well">
+		    <div class="input-group">
+		    	<h2> 로그인</h2>
+		    	<dl>
+		    		<dt> 이메일 </dt>
+					<dd><input type="text" name = "email" class="form-control" id='loginbox'> </dd>
+					<dt> 비밀번호 </dt>
+					<dd><input type="password" name = "password" class="form-control" class='loginbox'> </dd>
+				</dl>
+			</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox"> 아이디 저장하기
+					</label>
+				</div>
+				<span class="input-group-btn">
+				<button class="btn btn-default" type="submit">Submit</button></span>
+		    </div><!-- /input-group -->
+		  </div><!-- /.col-lg-6 -->
+		</div><!-- /.row -->
+	</form>
+	{% endblock %}
